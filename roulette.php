@@ -1,6 +1,6 @@
 <?php
 
-spl_autoload_register(function($className) {
+spl_autoload_register(function ($className) {
     include_once $className . '.class' . '.php';
 });
 
@@ -10,7 +10,7 @@ class Roulette
 
     function __construct()
     {
-        $this->rouletteGame = new RouletteGame();
+        $this->rouletteGame = new RouletteGame(0);
     }
 
     public function createGame()
