@@ -3,19 +3,21 @@
 class Table
 {
     private array $bets;
-    private Bet $bet;
     private Wheel $wheel;
 
     function __construct()
     {
-        $this->bet = new Bet();
         $this->wheel = new Wheel();
     }
 
-    public function placeBet()
+    public function addBet($bet)
     {
-        $this->bet->addBet();
-        $this->wheel->roll();
+        $this->bets[] = $bet;
+    }
+
+    public function placeBet($amount, $type)
+    {
+        $this->addBet(new Bet($amount, $type));
     }
 
 }

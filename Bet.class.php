@@ -5,9 +5,10 @@ class Bet
     private int $amount;
     private string $type;
 
-    public function addBet()
+    function __construct($amount, $type)
     {
-        //
+        $this->amount = $amount;
+        $this->type = $type;
     }
 
     private function getAmount()
