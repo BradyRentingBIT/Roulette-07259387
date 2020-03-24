@@ -1,21 +1,23 @@
 <?php
 
-spl_autoload_register(function ($className) {
-    include_once $className . '.class' . '.php';
-});
+spl_autoload_register(
+    function ($className) {
+        include_once $className + '.class' + '.php';
+    }
+);
 
 class Roulette
 {
-    private RouletteGame $rouletteGame;
+    private RouletteGame $_rouletteGame;
 
     function __construct()
     {
-        $this->rouletteGame = new RouletteGame(0);
+        $this->_rouletteGame = new RouletteGame(0);
     }
 
     public function createGame()
     {
-        $this->rouletteGame->play();
+        $this->_rouletteGame->play();
     }
 }
 

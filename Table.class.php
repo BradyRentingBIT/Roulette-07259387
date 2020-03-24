@@ -2,17 +2,17 @@
 
 class Table
 {
-    private array $bets;
-    private Wheel $wheel;
+    private array $_bets;
+    private Wheel $_wheel;
 
     function __construct()
     {
-        $this->wheel = new Wheel();
+        $this->_wheel = new Wheel();
     }
 
     public function addBet($bet)
     {
-        $this->bets[] = $bet;
+        $this->_bets[] = $bet;
     }
 
     public function placeBet($amount, $type)

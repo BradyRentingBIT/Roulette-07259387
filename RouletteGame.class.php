@@ -2,28 +2,28 @@
 
 class RouletteGame
 {
-    private Table $table;
-    private int $balance;
+    private Table $_table;
+    private int $_balance;
 
     function __construct($balance)
     {
-        $this->table = new Table();
-        $this->balance = $balance;
+        $this->_table = new Table();
+        $this->_balance = $balance;
     }
 
     public function play()
     {
-        echo "Your current balance: " . $this->balance .  PHP_EOL;
+        echo "Your current balance: " . $this->_balance .  PHP_EOL;
 
         // Let user fill in data
-        $amount = readline("Amount: ");
+        $amount = readline("Bet amount: ");
         $type = readline("Type: ");
 
-        $this->table->placeBet($amount, $type);
+        $this->_table->placeBet($amount, $type);
     }
 
     public function addBalance($balance)
     {
-        $this->balance = $balance;
+        $this->_balance = $balance;
     }
 }
